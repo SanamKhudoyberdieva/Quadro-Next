@@ -1,0 +1,1912 @@
+:root {
+    --main-color: #3B1E1C;
+    --active-color: #FEF3E1;
+    --border-color: #E8E8E8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-family: 'New York Large';;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000000;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+a {
+    color: #000000;
+    transition: all 300ms;
+}
+
+a:hover {
+    color: #3B1E1C;
+    text-decoration: none;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+button {
+    transition: all 300s;
+}
+
+p {
+    margin: 0;
+}
+
+/* ========================================================== */
+/* Breadcrumb */
+/* ========================================================== */
+
+.es-breadcrumb-menu {
+    background-color: transparent;
+    font-size: 16px;
+    font-style: italic;
+    font-family: 'TT Ramillas';
+    color: #FFFFFF;
+}
+
+.es-breadcrumb-menu a {
+    color: #FFFFFF;
+}
+
+.es-breadcrumb-menu .breadcrumb-item::before {
+    color: #FFFFFF !important;
+    font-weight: 400;
+}
+
+.es-breadcrumb {
+    background-color: transparent;
+    font-size: 16px;
+    padding: 60px 0;
+    margin-bottom: 0;
+    font-style: italic;
+    font-family: 'TT Ramillas';
+}
+
+.breadcrumb-item::before {
+    color: var(--main-color) !important;
+    font-weight: 400;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.ec-breadcrumb .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.es-logo {
+    width: 20%;
+}
+
+.navbar {
+    padding: 17px 0;
+}
+
+.ec-breadcrumb .breadcrumb-item.active {
+    opacity: 0.7;
+}
+
+.es-header-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.es-header-nav a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: 'New York Large';
+}
+
+.es-header-nav a:hover {
+    color: var(--main-color);
+}
+
+.es-product-quantity {
+    width: 20%;
+}
+
+.navbar-nav a:hover svg {
+    fill: var(--main-color);
+}
+
+.navbar-nav a:hover svg path {
+    stroke: #FFFFFF;
+}
+
+.contact-nav a {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 27px;
+    color: var(--main-color);
+}
+
+.contact-nav p {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.pv-image {
+    position: relative;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    min-height: 240px;
+}
+
+.pv-image-wrapper {
+    width: 570px;
+    height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.pro-view-img {
+    width: 490px;
+    height: 490px;
+    z-index: 1;
+}
+
+.btn-pv {
+    z-index: 1;
+    position: absolute;
+    top: 12% !important;
+    right: 12% !important;
+}
+
+.pv-image .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pv-image .img-wrapper::before {
+    content: " ";
+    border: 1px solid #3B1E1C;
+    transform: rotate(45deg);
+    height: 410px;
+    width: 410px;
+    position: absolute;
+    overflow: visible;
+    opacity: 0.2;
+}
+
+.img-wrapper-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.img-wrapper-inner:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.img-wrapper-inner::before {
+    content: " ";
+    border: 1px solid #3B1E1C;
+    transform: rotate(45deg);
+    height: 170px;
+    width: 170px;
+    position: absolute;
+    top: 0;
+    overflow: visible;
+    opacity: 0.2;
+}
+
+.es-carusel-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-carousel .carousel-item .img-fluid {
+    height: 43.75rem;
+    object-fit: cover;
+}
+
+.es-carusel-img:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.btn-favourite {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+}
+
+.btn-favourite:hover path {
+    fill: var(--main-color);
+}
+
+.pv-title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 40px;
+    color: var(--main-color);
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+.pv-function {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 40px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.pv-price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 40px;
+    color: var(--main-color);
+}
+
+.es-btn-dark {
+    border: 1px solid var(--main-color);
+    border-radius: 0;
+    padding: 12px 82px;
+    color: #FFFFFF;
+    font-weight: 500;
+    background-color: var(--main-color);
+}
+
+.es-btn-dark:hover {
+    background-color: #FFFFFF;
+    color: var(--main-color);
+}
+
+.btn-cart {
+    border: 1px solid var(--main-color);
+    border-radius: 0;
+    padding: 12px 71px;
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.btn-cart:hover {
+    background-color: #3B1E1C;
+    color: #FFFFFF;
+}
+
+.btn-cart-modal {
+    border: 1px solid var(--main-color);
+    border-radius: 0;
+    width: 340px;
+    color: var(--main-color);
+    font-weight: 500;
+    padding: 12px 0;
+}
+
+.btn-cart-modal:hover {
+    background-color: #3B1E1C;
+    color: #FFFFFF;
+}
+
+.btn-cart-light {
+    font-family: 'New York Large';
+    border: 1px solid #FFFFFF;
+    border-radius: 0;
+    padding: 12px 66px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.btn-cart-light:hover {
+    background-color: #FFFFFF;
+    color: var(--main-color);
+}
+
+.es-pv-wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+}
+
+.es-category-list {
+    position: relative;
+}
+
+.es-carusel-item {
+    flex: 0 0 25%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    position: relative;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'New York Large';
+    color: var(--main-color);
+}
+
+.page-title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: var(--main-color);
+    margin-bottom: 40px;
+}
+
+.slick-arrow {
+    border: none;
+    background-color: transparent;
+}
+
+.slick-prev {
+    position: absolute;
+    left: 970px !important;
+    top: -80px !important;
+}
+
+.slick-next {
+    position: absolute;
+    top: -80px;
+    right: 0;
+}
+
+/* .es-prev-slick {
+    position: absolute !important;
+    top: -80px !important;
+    right: 90px !important;
+} */
+
+.es-next-slick {
+    position: absolute;
+    top: -80px;
+    right: 40px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.es-product-title {
+    font-family: 'New York Large';
+    font-weight: 500;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+
+.es-pro-price {
+    font-family: 'New York Large';
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.es-btn-cart {
+    font-family: 'New York Large';
+    border: 1px solid var(--main-color);
+    border-radius: 0;
+    padding: 7px 31px;
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.es-btn-cart:hover {
+    background-color: var(--main-color);
+    color: #FFFFFF;
+}
+
+.main-carusel-wrp {
+    position: relative;
+}
+
+.carousel-title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 76px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    font-family: 'New York Large';
+}
+
+.es-carusel-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-wrapper {
+    padding-top: 120px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content {
+    font-family: 'New York';
+    margin-top: 40px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.footer-item {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 30px;
+}
+
+.footer-links li {
+    font-family: 'New York Large';
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer-links li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-link a {
+    position: relative;
+}
+
+.footer-link a::before {
+    content: "";
+    width: 0;
+    border-bottom: 1px solid var(--main-color);
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.footer-link a:hover::before {
+    width: 100%;
+}
+
+.contact-number {
+    margin-bottom: 10px;
+}
+
+.contact-number a {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: var(--main-color);
+}
+
+.contact-footer {
+    text-align: end;
+}
+
+.contact-info {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.social-container svg {
+    margin-left: 20px;
+}
+
+.social-container svg:hover {
+    fill: var(--main-color);
+}
+
+.social-container svg:hover path {
+    stroke: #FFFFFF;
+}
+
+.es-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--main-color);
+    padding: 1.375rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 120px;
+}
+
+.es-footer-copyright,
+.es-footer-developer {
+    color: var(--main-color);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.es-footer-developer a:hover {
+    text-decoration: underline;
+}
+
+.main-carusel {
+    position: relative;
+}
+
+.main-carousel .carousel-item .img-fluid {
+    height: 43.75rem;
+    object-fit: cover;
+}
+
+.carousel-indicators {
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.carousel-backdrop {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 3rem 5rem;
+}
+
+.carousel-control-prev svg {
+    transform: rotate(-45deg);
+}
+
+.carousel-control-next svg {
+    transform: rotate(135deg);
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: transparent;
+    border: 0;
+    width: 10%;
+}
+
+.carousel-control-next path,
+.carousel-control-prev path {
+    stroke: #FFFFFF;
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    transform: rotate(45deg);
+}
+
+.carousel-control-prev span:hover, 
+.carousel-control-next span:hover {
+    background-color: #FFFFFF;
+}
+
+.carousel-control-prev span:hover path, 
+.carousel-control-next span:hover path {
+    stroke: var(--main-color);
+}
+
+.carousel-title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 76px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.carousel-info {
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 496;
+    font-size: 20px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+
+.carousel-indicators li.active {
+    background-color: #FFFFFF;
+}
+
+.es-carousel-content {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-content-wrapper {
+    max-width: 340px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-item {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.menu-type {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.menu-type-desc {
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.menu-link {
+    font-family: 'New York Large';
+    font-weight: 500;
+    line-height: 19px;
+    color: #3B1E1C;
+}
+
+.menu-link img {
+    transform: rotate(180deg);
+    height: 12px;
+    margin-left: 10px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.es-icon-wrapper {
+    height: 52px;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.icon-container {
+    border: 1px solid var(--main-color);
+    transform: rotate(45deg);
+    min-width: 36px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container:hover {
+    background-color: var(--main-color);
+}
+
+.icon-container:hover svg path {
+    stroke: #FFFFFF;
+}
+
+.icon-container-lg {
+    border: 1px solid var(--main-color);
+    transform: rotate(45deg);
+    min-height: 70px;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container-lg:hover {
+    background-color: var(--main-color);
+}
+
+.icon-container-lg:hover svg path {
+    stroke: #FFFFFF;
+}
+
+.links {
+    font-family: 'New York Large';
+    line-height: 19px;
+    font-weight: 500;
+}
+
+.icon-container svg,
+.icon-container-lg svg {
+    transform: rotate(-45deg);
+}
+
+.booking-bg {
+    background-image: url("../img/bg_booking.jpg");
+    display: flex;
+    justify-content: center;
+    padding: 120px 0;
+}
+
+.booking-form {
+    width: 940px;
+    padding: 50px 100px;
+    background-color: #FFFFFF;
+}
+
+.booking-desc {
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.booking-form-header {
+    max-width: 500px;
+    margin: auto;
+}
+
+.es-form-control {
+    border-radius: 0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #E8E8E8;
+    font-weight: 500;
+    color: var(--main-color);
+    padding-left: 0;
+    margin-bottom: 0px;
+}
+
+.booking-guide {
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #ACACAC;
+}
+
+.es-main-form {
+    width: 340px;
+}
+
+.es-form-modal {
+    width: 340px;
+    margin-bottom: 20px;
+}
+
+.booking-guide span {
+    color: var(--main-color);
+}
+
+.es-form-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.icon-wrapper {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.icon-wrapper-lg {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.es-products-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+}
+
+.es-product-wrapper {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 40px;
+}
+
+.es-row-img {
+    position: absolute;
+    width: 40%;
+}
+
+.main-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-title {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: var(--main-color);
+    font-family: 'New York Large';
+}
+
+.about-content {
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110%;
+    margin-bottom: 10px;
+}
+
+.about-content-wrapper {
+    padding: 80px 0;
+}
+
+.es-about-banner {
+    height: 700px;
+    object-fit: cover;
+}
+
+.es-icon-wrapper-lg {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.section-wrp {
+    margin-bottom: 120px;
+}
+
+.es-cart-header {
+    color: #ffffff;
+    font-size: 1.25rem;
+    background-color: var(--main-color);
+    padding: 1.25rem 0;
+}
+
+.es-ch-block {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.es-ch-product {
+    width: 40%;
+    display: flex;
+    text-align: left;
+}
+
+.es-ch-price {
+    width: 20%;
+    font-weight: 500;
+}
+
+.es-ch-quantity {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.es-ch-quantity .es-product-controls {
+    width: 140px;
+}
+
+.es-ch-total {
+    width: 20%;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.es-ch-action {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.es-ch-action .btn-icon {
+    border: 1px solid var(--main-color);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+}
+
+.btn-icon-modal:hover svg {
+    fill: var(--main-color);
+}
+
+.btn-icon-modal:hover svg path {
+    stroke: #FFFFFF;
+}
+
+.es-ch-action .btn-icon img {
+    transform: rotate(-45deg);
+}
+
+.es-cart-products {
+    color: #000000;
+}
+
+.es-cart-item {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.es-ch-title {
+    font-weight: 500;
+}
+
+.es-ch-img {
+    width: 122px;
+    height: 122px;
+    margin-right: 1.5rem;
+}
+
+.es-ch-detail {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.es-product-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-color);
+}
+
+.es-product-controls .btn {
+    font-weight: 500;
+}
+
+.es-product-controls span {
+    font-weight: 500;
+}
+
+.es-ch-quantity .es-product-controls {
+    width: 140px;
+}
+
+.es-cart-footer {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.es-back-link {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.es-cf-right {
+    width: 40%;
+}
+
+.es-cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 1.875rem;
+}
+
+.btn-primary {
+    color: var(--main-color);
+    background-color: #FFFFFF;
+    border: 1px solid var(--main-color);
+    transition: all 300ms;
+    border-radius: 0;
+    padding: 12px 0;
+}
+
+.btn-primay:hover {
+    color: #ffffff;
+    background-color: #CCAF8D;
+}
+
+.btn-counter {
+    min-width: 40%;
+    text-align: center;
+}
+
+.btn-counter span {
+    min-width: 20%;
+}
+
+.es-checkout-items {
+    margin-left: 9rem;
+    position: sticky;
+    top: 0;
+    margin-bottom: 2.5rem;
+}
+
+.es-checkout-item {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+.es-checkout-list {
+    margin-bottom: 1.875rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.es-checkout-img {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.es-checkout-detail {
+    width: calc(100% - 8.75rem);
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.es-checkout-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 15px;
+}
+
+.es-tab-title {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 38px;
+}
+
+.es-control-label {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.discount-pr-wrp {
+    padding: 0 10px;
+}
+
+.es-form-group {
+    margin-bottom: 1.875rem;
+}
+
+.es-form-control {
+    height: calc(2rem + 1rem + 2px);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.radio-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-bottom: 0;
+}
+
+.radio-label-wrp {
+    display: flex;
+}
+
+input[type="radio"] {
+    display: inline-grid;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: 0;
+    color: currentColor;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    margin-right: 0.4rem;
+    -webkit-transform: translateY(-0.075em);
+    transform: translateY(-0.075em);
+    place-content: center;
+    background: var(--border-color);
+    transition: all 0.3s;
+}
+
+input[type="radio"]:hover {
+    background: #e1e1e18a;
+}
+
+input[type="radio"]:checked::before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border: 0.375rem solid var(--main-color);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 120ms -webkit-transform ease-in-out;
+    transition: 120ms -webkit-transform ease-in-out;
+    transition: 120ms transform ease-in-out;
+    transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
+}
+
+.main-form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    padding: 29px 0;
+}
+
+.es-pv-checklist  {
+    display: flex;
+}
+
+.gender-wrp {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.about-order {
+    border: 1px solid var(--main-color);
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 25px 15px;
+    margin-bottom: 40px;
+}
+
+.es-action-block {
+    margin-bottom: 10px;
+}
+
+.es-404-content {
+    text-align: center;
+}
+
+.es-404-img {
+    margin-bottom: 60px;
+}
+
+.btn-primary:hover {
+    background-color: var(--main-color);
+}
+
+.btn-primary-lg {
+    border: 1px solid var(--main-color);
+    border-radius: 0;
+    padding: 12px 200px;
+}
+
+.btn-primary-lg:hover {
+    background-color: var(--main-color);
+    color: #FFFFFF;
+}
+
+.es-search-block {
+    text-align: center;
+    max-width: 58.75rem;
+    margin: auto;
+}
+
+.es-search-group {
+    margin-bottom: 6.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap !important;
+}
+
+.es-search-input {
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.input-group-text {
+    border: none;
+}
+
+.es-search-ic {
+    display: flex;
+    align-items: center;
+}
+
+.noresult {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.start-search {
+    font-family: 'New York Large';
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+}
+
+.es-profile-card {
+    border-radius: 0;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.es-user-info-body {
+    padding: 0 1.25rem;
+}
+
+.es-profile-detail {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.es-profile-detail:nth-last-child(1) {
+    border: none;
+}
+
+.es-profile-value {
+    font-weight: 500;
+}
+
+.es-accumulative-title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+}
+
+.es-profile-qr {
+    margin-bottom: 1.25rem;
+}
+
+.es-card-balance {
+    display: flex;
+    justify-content: center;
+}
+
+.es-cb-value {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.es-profile-actions {
+    margin-top: 2.5rem;
+}
+
+.es-history {
+    padding-left: 3rem;
+}
+
+.es-history-title {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: #000000;
+    margin-bottom: 30px;
+    margin-top: 0.625rem;
+}
+
+.history-table {
+    color: #000000;
+}
+
+.es-empty-history {
+    text-align: center;
+    width: max-content;
+}
+
+.empty-history-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.empty-history-desc {
+    margin-bottom: 2.5rem;
+}
+
+.es-order-complete {
+    border: 1px solid var(--border-color);
+    text-align: center;
+    width: 460px;
+    height: 460px;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.es-inner-wrp {
+    transform: rotate(-45deg);
+}
+
+.es-order-complete-logo {
+    margin-bottom: 20px;
+}
+
+.es-order-complete-title {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.es-order-number {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+
+.es-order-complete-desc {
+    font-family: 'New York Large';
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+
+.btn-container {
+    margin-bottom: 10px;
+}
+
+.order-complete-wrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+.order-complete {
+    margin-bottom: 240px;
+}
+
+.es-tabs {
+    display: flex;
+    margin-bottom: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.es-tabs .nav-item {
+    width: 49%;
+}
+
+.es-tabs .nav-link {
+    text-align: center;
+    border-radius: 0;
+    width: 100%;
+}
+
+.es-tabs .nav-link.active,
+.es-tabs .show > .nav-link {
+    color: #3B1E1C;
+    background-color: #FFFFFF;
+}
+
+.category-menu-header {
+    background-image: url("../img/category_1.jpg");
+    margin-bottom: 100px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.header-cont-title {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: #FFFFFF;
+}
+
+.es-nav-tabs {
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-bottom: 60px;
+}
+
+.es-nav-tabs .nav-link {
+    color: var(--main-color);
+    border: none;
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.es-nav-tabs .nav-link.active {
+    color: var(--main-color);
+    border: none;
+    text-decoration: underline;
+}
+
+.es-nav-tabs .nav-link {
+    border: none;
+    background-color: inherit;
+}
+
+.header-content-subtitle {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.es-nav-pills {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.es-nav-pills .nav-link {
+    border-radius: 0;
+    margin-right: 10px;
+    border: 1px solid var(--main-color);
+    background-color: inherit;
+}
+
+.es-nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #FFFFFF;
+    background-color: var(--main-color);
+    border-radius: 0;
+}
+
+.discount-pr {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.btn-counter:hover {
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+}
+
+.discount-date {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    border: 1px solid var(--main-color);
+    min-height: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    background-color: #FFFFFF;
+}
+
+.discount-date-inner {
+    transform: rotate(-45deg);
+}
+
+.discount-type {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.discount-desc {
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+}
+
+.discount-title {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #3B1E1C;
+}
+
+.discount-pr-content {
+    max-width: 700px;
+    margin-bottom: 10px;
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.contact-label {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 25px 0;
+}
+
+.contact-item {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3B1E1C;
+    margin-top: 10px;
+}
+
+.contact-type {
+    margin-right: 20px;
+}
+
+.es-group-title {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.es-public-offer {
+    max-width: 58.75rem;
+    margin: auto;
+}
+
+.es-public-offer-text {
+    font-family: 'New York';
+    font-style: italic;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 2.5rem;
+}
+
+.es-public-offer-text:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.es-map {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.es-map-btn {
+    border: 1px solid var(--main-color);
+    background-color: var(--active-color);
+    width: 100%;
+    border-radius: 0;
+    padding: 12px 0;
+    margin-top: 15px;
+}
+
+.es-dropdown-wrp {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+}
+
+.es-btn-dropdown {
+    text-align: start;
+    padding-left: 0;
+    position: relative;
+    font-family: 'New York Large';
+}
+
+.dropright .dropdown-toggle::after {
+    position: absolute;
+    top: 40%;
+    right: 0;
+}
+
+.modal-dialog-full {
+    max-width: 100%;
+    margin: 0;
+}
+
+.modal-dialog-full .modal-content {
+    border: 0;
+    border-radius: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.modal-dialog-full .modal-header {
+    background-color: #FFFFFF;
+    padding: 1px 15px;
+    border-radius: 0;
+    align-items: center;
+}
+
+.dropdowns-sm-wrapper {
+    margin-bottom: 30px;
+}
+
+.modal-content {
+    position: relative;
+    border-radius: 0;
+}
+
+.es-modal-sticky-nav {
+    display: flex;
+}
+
+.es-modal-title  {
+    font-family: 'TT Ramillas';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.es-modal-back {
+    width: 10%;
+    text-align: left;
+    padding-left: 1.25rem;
+}
+
+.es-btn-primary {
+    margin: 20px;
+    border: 1px solid var(--main-color);
+    background-color: #FFFFFF;
+    color: var(--main-color);
+    border-radius: 0;
+    padding: 12px 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.es-btn-primary:hover {
+    color: #FFFFFF;
+}
+
+.es-btn-primary::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: 0.3s ease all;
+    transform: scale(0, 1);
+    transform-origin: bottom left;
+    transition: transform 50ms cubic-bezier(0.86, 0, 0.07, 1);
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.es-btn-primary:hover::after {
+    transform: scale(1,1);
+    transform-origin: bottom left;
+}
+
+.es-modal-header {
+    border-bottom: none;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 0;
+}
+
+.logo-modal-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.es-modal-body {
+    padding: 0;
+    padding: 10px 60px 60px 60px;
+}
+
+.es-menu-modal-body {
+    padding: 20px 15px;
+}
+
+.es-modal-content {
+    width: 460px;
+    height: 720px;
+}
+
+.es-form-modal-wrp {
+    margin-bottom: 40px;
+}
+
+.img-link {
+    z-index: 1;
+}
+
+.form-control:focus {
+    color: var(--main-color);
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+
+.mobile-nav {
+    background: #FFFFFF;
+    border-top: 1px solid var(--border-color);
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1040;
+    bottom: 0;
+}
+
+.mobile-nav .nav {
+    width: 100%;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.mobile-nav .nav-link {
+    font-family: 'New York Large';
+    font-weight: 500;
+    font-size: 12px;
+    color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.75rem;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.mobile-nav .nav-link img {
+    height: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-nav .nav-link span.menu-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.mobile-nav .nav-link .badge-cart {
+    top: 0.7rem;
+    right: 1.3rem;
+}
+
+.es-category-link {
+    position: relative;
+    width: max-content;
+}
+
+.es-category-link::before {
+    content: "";
+    width: 0;
+    border-bottom: 1px solid var(--main-color);
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.es-category-link:hover img {
+    margin-left: 2rem;
+}
+
+.es-category-link:hover::before {
+    width: 100%;
+}
