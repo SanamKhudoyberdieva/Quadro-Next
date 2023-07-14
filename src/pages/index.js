@@ -1,8 +1,21 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Product from "@/components/Product";
+import { getDescription, getImage, getName } from "@/plugins/custom";
+import { useSelector } from "react-redux";
 
 const Index = () => {
+  const { sliders } = useSelector((state) => state.getDataReducer);
+  const { cdnUrl } = useSelector((state) => state.getDataReducer);
+  const { groups } = useSelector((state) => state.getDataReducer);
+  const [shownGroups, setShownGroups] = useState(4);
+  const { newProducts } = useSelector((state) => state.getDataReducer);
+
+  const addGroup = () => {
+    if (shownGroups > groups.length) return groups.length;
+    setShownGroups((x) => x + 4);
+  };
+
   return (
     <main>
       <section className="main-carusel-wrp section-wrp">
@@ -13,107 +26,44 @@ const Index = () => {
             id="mainCarousel"
           >
             <ol className="carousel-indicators">
-              <li
-                data-target="#mainCarousel"
-                data-slide-to="0"
-                className="active"
-              ></li>
-              <li
-                data-target="#mainCarousel"
-                data-slide-to="1"
-                className=""
-              ></li>
-              <li
-                data-target="#mainCarousel"
-                data-slide-to="2"
-                className=""
-              ></li>
+              {sliders.map((x, idx) => {
+                return (
+                  <li
+                    key={"indicator-index-" + idx}
+                    data-target="#mainCarousel"
+                    data-slide-to="0"
+                    className="active"
+                  ></li>
+                )
+              })}
             </ol>
             <div className="carousel-inner">
-              <div className="carousel-item es-carouse-item">
-                <Image
-                  className="img-fluid w-100 es-carousel-banner"
-                  src={require("../assets/img/index_1.jpg")}
-                  alt="banner"
-                />
-                <div className="carousel-backdrop">
-                  <div className="es-carousel-content container">
-                    <div className="carousel-title">Добро пожаловать!</div>
-                    <div className="carousel-info">
-                      Вот вам яркий пример современных тенденций — повышение
-                      уровня гражданского сознания однозначно определяет каждого
-                      участника как способного принимать собственные решения
-                      касаемо дальнейших направлений развития.
+              {sliders.map((x, idx) => {
+                return(
+                  <div className="carousel-item es-carouse-item" key={"slider-index-" + idx}>
+                    <Image
+                      className="img-fluid w-100 es-carousel-banner"
+                      src={cdnUrl + "sliders" + getImage(x)}
+                      width={1366}
+                      height={384}
+                      alt="banner"
+                    />
+                    <div className="carousel-backdrop">
+                      <div className="es-carousel-content container">
+                        <div className="carousel-title">{getName(x)}</div>
+                        <div className="carousel-info">
+                          {getDescription(x)}
+                        </div>
+                        {x.url.length > 0 && (
+                          <a href={"https://quadro.exord.uz/" + x.url} className="btn-cart-light">
+                            Подробнее
+                          </a>
+                        )}
+                      </div>
                     </div>
-                    <a href="#" className="btn-cart-light">
-                      Подробнее
-                    </a>
                   </div>
-                </div>
-              </div>
-              <div className="carousel-item es-carouse-item active">
-                <Image
-                  className="img-fluid w-100 es-carousel-banner"
-                  src={require("../assets/img/index_1.jpg")}
-                  alt="banner"
-                />
-                <div className="carousel-backdrop">
-                  <div className="es-carousel-content container">
-                    <div className="carousel-title">Добро пожаловать!</div>
-                    <div className="carousel-info">
-                      Вот вам яркий пример современных тенденций — повышение
-                      уровня гражданского сознания однозначно определяет каждого
-                      участника как способного принимать собственные решения
-                      касаемо дальнейших направлений развития.
-                    </div>
-                    <a href="#" className="btn-cart-light">
-                      Подробнее
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="carousel-item es-carouse-item">
-                <Image
-                  className="img-fluid w-100 es-carousel-banner"
-                  src={require("../assets/img/index_1.jpg")}
-                  alt="banner"
-                />
-                <div className="carousel-backdrop">
-                  <div className="es-carousel-content container">
-                    <div className="carousel-title">Добро пожаловать!</div>
-                    <div className="carousel-info">
-                      Вот вам яркий пример современных тенденций — повышение
-                      уровня гражданского сознания однозначно определяет каждого
-                      участника как способного принимать собственные решения
-                      касаемо дальнейших направлений развития.
-                    </div>
-                    <a href="#" className="btn-cart-light">
-                      Подробнее
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="carousel-item es-carouse-item">
-                <Image
-                  className="img-fluid w-100 es-carousel-banner"
-                  src={require("../assets/img/index_1.jpg")}
-                  alt="banner"
-                />
-                <div className="carousel-backdrop">
-                  <div className="es-carousel-content container">
-                    <div className="carousel-title">Добро пожаловать!</div>
-                    <div className="carousel-info">
-                      Вот вам яркий пример современных тенденций — повышение
-                      уровня гражданского сознания однозначно определяет каждого
-                      участника как способного принимать собственные решения
-                      касаемо дальнейших направлений развития.
-                    </div>
-                    <a href="#" className="btn-cart-light">
-                      Подробнее
-                    </a>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -174,74 +124,52 @@ const Index = () => {
         <div className="container">
           <h2 className="section-title">Меню</h2>
           <div className="row">
-            <div className="col-md-6">
-              <div className="menu-item">
-                <div className="img-container">
-                  <div className="img-wrapper-inner">
-                    <a className="img-link" href="#">
-                      <Image
-                        src={require("../assets/img/menu_1.jpg")}
-                        className="img-fluid width-100"
-                        alt="menu"
-                      />
-                    </a>
+              {
+                groups.slice(0, shownGroups).map((group, idx) => {
+                  return(
+                    <div className="col-md-6">
+                    <div className="menu-item" key={"category-index-" + idx}>
+                      <div className="img-container">
+                        <div className="img-wrapper-inner">
+                          <a className="img-link" href="#">
+                            {group.image ? (<Image
+                              src={cdnUrl + "groups/" + getImage(group)}
+                              className="img-fluid width-100"
+                              alt="menu"
+                            />) : (
+                            <Image
+                              src={require("../assets/img/menu_1.jpg")}
+                              className="img-fluid width-100"
+                              alt="menu"
+                            />)}
+                          </a>
+                        </div>
+                      </div>
+                      <div className="menu-content-wrapper">
+                        <div className="menu-type">{getName(group)}</div>
+                        <div className="menu-type-desc">
+                          {getDescription(group)}
+                        </div>
+                        <div className="es-category-link">
+                          <a href="#" className="menu-link">
+                            В меню{" "}
+                            <Image
+                              src={require("../assets/img/Vector.svg")}
+                              className="img-fluid width-100"
+                              alt="vector"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="menu-content-wrapper">
-                  <div className="menu-type">Основные блюда</div>
-                  <div className="menu-type-desc">
-                    Но явные признаки победы институционализации являются только
-                    методом политического участия и своевременно верифицированы.
-                  </div>
-                  <div className="es-category-link">
-                    <a href="#" className="menu-link">
-                      В меню
-                      <Image
-                        src={require("../assets/img/Vector.svg")}
-                        className="img-fluid width-100"
-                        alt="vector"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="menu-item">
-                <div className="img-container">
-                  <div className="img-wrapper-inner">
-                    <a className="img-link" href="#">
-                      <Image
-                        src={require("../assets/img/menu_1.jpg")}
-                        className="img-fluid width-100"
-                        alt="menu"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div className="menu-content-wrapper">
-                  <div className="menu-type">Основные блюда</div>
-                  <div className="menu-type-desc">
-                    Но явные признаки победы институционализации являются только
-                    методом политического участия и своевременно верифицированы.
-                  </div>
-                  <div className="es-category-link">
-                    <a href="#" className="menu-link">
-                      В меню
-                      <Image
-                        src={require("../assets/img/Vector.svg")}
-                        className="img-fluid width-100"
-                        alt="vector"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  )
+                })
+              }
           </div>
         </div>
-        <div className="links-container">
-          <a href="#" className="links">
+        {!(shownGroups > groups.length) && (<div className="links-container">
+          <button onClick={addGroup} className="links btn">
             <div className="es-icon-wrapper">
               <div className="icon-container">
                 <svg
@@ -262,8 +190,8 @@ const Index = () => {
               </div>
             </div>
             Все меню
-          </a>
-        </div>
+          </button>
+        </div>)}
       </section>
       <section className="booking section-wrp">
         <div className="booking-bg">
@@ -439,10 +367,11 @@ const Index = () => {
         <div className="container">
           <h2 className="section-title">Новинки</h2>
           <div className="es-products-list">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            {newProducts.map((x, idx) => {
+              return (
+                <Product key={"newProduct-index-" + idx} product={x} />
+              )
+            })}
           </div>
         </div>
       </section>

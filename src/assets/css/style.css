@@ -23,6 +23,10 @@ a {
     transition: all 300ms;
 }
 
+.nav-link:hover {
+    opacity: 0.7;
+}
+
 a:hover {
     color: #3B1E1C;
     text-decoration: none;
@@ -239,6 +243,14 @@ p {
     position: absolute;
     top: 14px;
     right: 8px;
+}
+
+.btn-favourite path {
+    fill: #FFFFFF;
+}
+
+.btn-favourite.active svg path {
+    fill: #3b1e1c !important;
 }
 
 .btn-favourite:hover path {
@@ -875,6 +887,19 @@ ul {
     flex: 0 0 25%;
     max-width: 25%;
     margin-bottom: 40px;
+}
+
+#authModal .modal-content {
+    border: none;
+}
+
+#registerModal .modal-content {
+    border: none;
+}
+
+#authModal .es-modal-content {
+    height: auto;
+    width: auto;
 }
 
 .es-row-img {

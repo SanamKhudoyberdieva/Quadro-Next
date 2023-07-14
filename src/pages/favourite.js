@@ -1,7 +1,17 @@
 import React from 'react'
 import Product from '@/components/Product'
+import { useSelector } from 'react-redux';
 
 const Favourite = () => {
+    const favorites = useSelector((state) => state.favoritesReducer);
+    const { products } = useSelector((state) => state.getDataReducer);
+
+    let buildFavorites =[];
+
+    favorites.forEach((x) => {
+        let item = products.find((y) => y.id === x);
+        buildFavorites.push(item);
+    });
     return (
         <main>
         <div className="container">
@@ -16,10 +26,11 @@ const Favourite = () => {
         <section className="favourite section-wrp">
             <div className="container">
                 <div className="es-products-list">
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
+                    {buildFavorites.map((x, idx) => {
+                        return(
+                            <Product key={"favorite-product-index" + idx} product={x} />
+                        );
+                    })}
                 </div>
             </div>
         </section>
@@ -27,4 +38,4 @@ const Favourite = () => {
     )
 }
 
-export default Favourite
+export default Favourite;

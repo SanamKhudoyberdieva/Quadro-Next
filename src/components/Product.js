@@ -1,16 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
+import { useDispatch, useSelector } from 'react-redux'
+import Link from 'next/link';
+import { getImage, getName, getPrice } from '@/plugins/custom';
+import { addToFavorites } from '@/store/actions';
 
-const Product = () => {
+const Product = ({ key = "", product = {} }) => {
+    const dispatch = useDispatch();
+    const favorites = useSelector((state) => state.favoritesReducer);
+    console.log(favorites)
     return (
-        <div className="es-product-wrapper">
+        <div className="es-product-wrapper" key={key}>
             <div className="es-carusel-item">
                 <div className="es-carusel-img">
-                    <a href="#">
-                        <Image className="lazy img-fluid" status="loading" src={require("../assets/img/product_2.jpg")} alt="product" />
-                    </a>
+                    <Link href={`/product/${product.url}`}>
+                        {!product.image ? (<Image className="lazy img-fluid" status="loading" src={require("../assets/img/product_2.jpg")} alt="product" /> ) :
+                        ( <Image className="lazy img-fluid" status="loading" src={cdnUrl + "products/" + getImage(product) } alt="product" /> )}
+                    </Link>
                 </div>
-                <button className="btn btn-favourite">
+                <button className={"btn btn-favourite" + " " + (favorites.find((i) => i == product.id) ? "active" : "")} 
+                    onClick={() => dispatch(addToFavorites(product.id))}>
                     <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_40_2865)">
                         <rect x="26" y="1.61885" width="35" height="35" transform="rotate(45 26 1.61885)" fill="white" stroke="#3B1E1C"/>
@@ -27,9 +36,9 @@ const Product = () => {
             </div>
             <div className="es-carusel-info">
                 <div className="es-product-title">
-                    <a href="#">Медальоны с карт крокетами</a>
+                    <Link href={`/product/${product.url}`}>{getName(product)} с карт крокетами</Link>
                 </div>
-                <div className="es-pro-price">250 000 сум</div>
+                <div className="es-pro-price">{getPrice(product)}</div>
                 <button className="btn es-btn-cart">В корзину</button>
             </div>
         </div>

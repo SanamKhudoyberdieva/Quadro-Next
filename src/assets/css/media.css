@@ -202,7 +202,8 @@
     }
 
     .es-logo {
-        width: auto;
+        width: 95px;
+        height: 42px;
     }
 
     .es-logo-img {
@@ -689,6 +690,8 @@
     .mobile-nav .nav-link {
         padding: 0.5rem;
         font-size: 1.2rem;
+        display: flex;
+        align-items: center;
     }
 
     .pro-view-img {

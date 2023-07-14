@@ -176,7 +176,7 @@ const Product = () => {
                 <div className="pv-image-wrapper">
                   <div className="img-wrapper">
                     <Image
-                      src={require("../assets/img/product_1.jpg")}
+                      src={require("../../assets/img/product_1.jpg")}
                       alt="product"
                       className="img-fluid pro-view-img"
                     />
@@ -258,7 +258,7 @@ const Product = () => {
                     <Image
                       className="lazy img-fluid"
                       status="loading"
-                      src={require("../assets/img/product_2.jpg")}
+                      src={require("../../assets/img/product_2.jpg")}
                       alt="product"
                     />
                   </a>
@@ -324,7 +324,7 @@ const Product = () => {
                     <Image
                       className="lazy img-fluid"
                       status="loading"
-                      src={require("../assets/img/product_3.jpg")}
+                      src={require("../../assets/img/product_3.jpg")}
                       alt="product"
                     />
                   </a>
@@ -390,7 +390,7 @@ const Product = () => {
                     <Image
                       className="lazy img-fluid"
                       status="loading"
-                      src={require("../assets/img/product_4.jpg")}
+                      src={require("../../assets/img/product_4.jpg")}
                       alt="product"
                     />
                   </a>
@@ -456,7 +456,7 @@ const Product = () => {
                     <Image
                       className="lazy img-fluid"
                       status="loading"
-                      src={require("../assets/img/product_5.jpg")}
+                      src={require("../../assets/img/product_5.jpg")}
                       alt="product"
                     />
                   </a>
@@ -522,7 +522,7 @@ const Product = () => {
                     <Image
                       className="lazy img-fluid"
                       status="loading"
-                      src={require("../assets/img/product_4.jpg")}
+                      src={require("../../assets/img/product_4.jpg")}
                       alt="product"
                     />
                   </a>
@@ -588,7 +588,7 @@ const Product = () => {
                     <Image
                       className="lazy img-fluid"
                       status="loading"
-                      src={require("../assets/img/product_3.jpg")}
+                      src={require("../../assets/img/product_3.jpg")}
                       alt="product"
                     />
                   </a>
@@ -654,7 +654,7 @@ const Product = () => {
                     <Image
                       className="lazy img-fluid"
                       status="loading"
-                      src={require("../assets/img/product_5.jpg")}
+                      src={require("../../assets/img/product_5.jpg")}
                       alt="product"
                     />
                   </a>
